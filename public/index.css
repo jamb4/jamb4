@@ -1,0 +1,170 @@
+body {
+    background: #AD2E4D;
+}
+
+.title {
+    color: white;
+    font-family: 'Rochester', cursive;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0 6rem;
+}
+
+.title² {
+    color: #440303;
+
+}
+
+.nav {
+    background: rgba(49, 22, 22, 0.35);
+    border-bottom: 1px solid #EAEAEB;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 2rem;
+}
+
+.menu {
+    margin: 0 30px 0 0;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: white;
+    margin: 2rem;
+    line-height: 70px;
+}
+
+span {
+    color: black;
+    ;
+
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+span:hover {
+    color: #ffff;
+}
+
+a:hover {
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    transition-duration: 1s;
+    transition-delay: 0 8s;
+    padding: 1rem;
+}
+
+.dropbtn {
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    border-radius: 16px;
+    display: none;
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.35);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+
+    background: rgba(53, 16, 16, 0.29);
+    border-radius: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+
+    }
+
+    #toggle:checked+.menu {
+        display: block;
+
+    }
+
+    .dropdown {
+        z-index: 4;
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .conteudo {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .colum2 {
+        background: rgba(53, 16, 16, 0.29);
+    }
+}
+
+.centro {
+        text-align: center;
+}

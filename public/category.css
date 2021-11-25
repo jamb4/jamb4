@@ -1,0 +1,84 @@
+.centro {
+    text-align: center;
+
+}
+
+.colum1 {
+    margin: auto !important;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.35);
+    width: 60%;
+    min-width: 305px;
+    padding: 20px;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid white !important;
+}
+
+.colum2 {
+    display: none;
+    margin: auto !important;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.35);
+    width: 60%;
+    min-width: 305px;
+    padding: 20px;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid white !important;
+}
+
+select {
+    margin: 2rem;
+    display: flex;
+    align-items: left;
+}
+
+input {
+    margin: 2rem;
+    display: flex;
+    align-items: left;
+}
+
+button {
+    padding: 10px
+}
+
+.inputPesquisa {
+
+    padding-left: 23px;
+    padding-top: 5px;
+
+    background-image: url(16492.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.animelist {
+    display: flex;
+
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    display: inline;
+}
+
+.gridimg {
+    width: 180px;
+    display: inline;
+}
+
+.gridtext {
+    color: white;
+    display: inline;
+
+}
+
+.colorfundo {
+    margin: 6px;
+    margin-top: 4px;
+    background: rgba(0, 0, 0, 0.35);
+    display: inline-block;
+
+}
+
+a {
+    color: white
+}

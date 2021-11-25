@@ -1,0 +1,16 @@
+.center{
+    
+    display: flex;
+    justify-content: center;
+    }
+    .conteudo1{
+        margin-top: 100px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.35);
+        max-width: 70%;
+        padding: 60px;
+    }
+    input{
+        margin: 2rem;
+    }
+ 

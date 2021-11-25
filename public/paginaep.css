@@ -1,0 +1,61 @@
+.imginfo{
+    border-right: 1px solid white;
+    margin: 20px;
+    width: 270px;
+    display: flex;
+}
+.info{
+    border: 1px solid white;
+    display:flex ;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.35);
+}
+.textinfo{
+    margin-left: 20px;
+    display: flex;
+}
+.options{
+    
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+.ok{
+    margin-left: 8px;
+    color: greenyellow;
+}
+.avaliacao{
+    margin-top: 30px;
+    color:white;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.35);
+}
+.avaliacaomensagem{
+    border-bottom: 1px solid white;
+    display: block;
+    margin: 30px;
+}
+.episodios{
+    margin-right: 30px;
+    padding: auto;
+    margin-bottom: 30px;
+    align-items: flex-end;
+    width: 150px;
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.buton{
+    display: flex;
+    align-items: flex-end;
+}
+.episodios:hover{background-color: white;
+color: black;}
+.infoani{
+    display: flex;
+    justify-content: space-between;
+}
