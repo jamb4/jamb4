@@ -1,29 +1,45 @@
 var xhttp = new XMLHttpRequest();
 
 xhttp.onload = function () {
+   
     let response = JSON.parse(this.responseText);
     console.log(JSON.parse(this.responseText));
 
-    let divImage1 = document.getElementById("image1");
-    let image1 = document.createElement("img");
-    divImage1.appendChild(image1);
-    image1.src = response.data[0].attributes.coverImage.large;
-    image1.alt = "cowboy beebop";
-    image1.classList.add("imgind");
-    image1.onclick = function () {
-        window.location.href = `paginaep.html?anime=${response.data[0].id}` //"paginaep.html?anime=" + response.data[0].id
+    for (data of response.data) {
+    let div= document.getElementById("colum1")
+    let div1= document.createElement("div")
+    div1.classList.add("styInd")
+    div.appendChild(div1)
+    let div2 = document.createElement("div")
+    div2.classList.add("imgind");
+    div1.appendChild(div2);
+    let div3 = document.createElement("div")
+    div3.classList.add("textind")
+    div1.appendChild(div3);
+    if (data.attributes.coverImage) {
+    let image = document.createElement("img");
+    div2.appendChild(image);
+    image.src = data.attributes.coverImage.large;
+    image.alt = data.attributes.slug
+    image.classList.add("imgind");
+    image.id=data.id;
+    image.onclick = function (event) {
+        let id = event.target.id;
+        window.location.href = `paginaep.html?anime=${id}` //"paginaep.html?anime=" + response.data[0].id
     }
+}
 
-    let divDescriptionImage1 = document.getElementById("descriptionImage1");
-    let h2Image1 = document.createElement("h2");
-    h2Image1.textContent = response.data[0].attributes.canonicalTitle;
-    divDescriptionImage1.appendChild(h2Image1);
-    let spanImage1 = document.createElement("span");
-    spanImage1.textContent = response.data[0].attributes.description;
-    spanImage1.classList.add("textind");
-    divDescriptionImage1.appendChild(spanImage1);
+    let h2 = document.createElement("h2");
+    h2.textContent = data.attributes.canonicalTitle;
+    div3.appendChild(h2);
+    let span = document.createElement("span");
+    span.textContent = data.attributes.description;
+    span.classList.add("textind");
+    div3.appendChild(span);
+}
+}
 
-    // conteudo da posicao 3
+   /* // conteudo da posicao 3
 
     let divImage2 = document.getElementById("image2");
     let image2 = document.createElement("img");
@@ -234,6 +250,7 @@ xhttp.onload = function () {
 
  
 }
+*/
 
 xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=8&page[offset]=0");
 xhttp.send();
