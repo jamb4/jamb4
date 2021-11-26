@@ -1,6 +1,6 @@
 .colum1 {
+    flex-direction: column;
     display: flex;
-    flex-flow: row wrap;
     margin: auto !important;
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.35);

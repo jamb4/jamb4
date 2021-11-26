@@ -4,6 +4,8 @@
 }
 
 .colum1 {
+    display: flex;
+    align-items: start;
     margin: auto !important;
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.35);

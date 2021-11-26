@@ -169,12 +169,25 @@ a:hover {
         text-align: center;
 }
 .next{
-    color:white;
-    background: rgba(53, 16, 16, 0.29);
-    padding: 20px]
-}
-.over{
+    margin: 20px;
+    border-radius: 16px;
+    border: none;
     color:white;
     background: rgba(53, 16, 16, 0.29);
     padding: 20px;
+    margin-right: 60px;
+}
+.over{
+    margin: 20px;
+    border-radius: 16px;
+    border: none;
+    color:white;
+    background: rgba(53, 16, 16, 0.29);
+    padding: 20px;
+}
+.pagina{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 60px;
 }

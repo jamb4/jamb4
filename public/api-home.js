@@ -41,7 +41,7 @@ xhttp.onload = function () {
         div3.appendChild(span);
     }
 }
-xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=8&page[offset]=0");
+xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=0");
 xhttp.send();
 
 function mudaPaginaMais () {
@@ -84,7 +84,7 @@ function mudaPaginaMais () {
             div3.appendChild(span);
         }
     }
-    xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=8&page[offset]=" + paginaAtual * 8);
+    xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=" + paginaAtual * 12);
     xhttp.send();
 }
 
@@ -130,24 +130,15 @@ function mudaPaginaMais () {
                 div3.appendChild(span);
             }
         }
-        xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=8&page[offset]=" + paginaAtual * 8);
+        xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=" + paginaAtual * 12);
         xhttp.send();
     }
     
-    xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=8&page[offset]=" + paginaAtual * 8);
+    xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=" + paginaAtual * 12);
     xhttp.send();
 
 
 /*
-   let divDescriptionpop1 = document.getElementById("descriptionPop1");
-   let h2pop1 = document.createElement("h2");
-   h2pop1.textContent = response.data[10].attributes.canonicalTitle;
-   divDescriptionpop1.appendChild(h2pop1);
-   let spanpop1 = document.createElement("span");
-   spanpop1.textContent = response.data[10].attributes.description;
-   spanpop1.classList.add("textind");
-   divDescriptionpop1.appendChild(spanpop1);
-
    // pop2
    let divPop2 = document.getElementById("pop2");
    if (response.data[8].attributes.coverImage) {
@@ -167,44 +158,4 @@ function mudaPaginaMais () {
    spanpop2.classList.add("textind");
    divDescriptionpop2.appendChild(spanpop2);
 
-   // pop3
-   let divPop3 = document.getElementById("pop3");
-   if (response.data[9].attributes.coverImage) {
-       let pop3 = document.createElement("img");
-       divPop3.appendChild(pop3);
-       pop3.src = response.data[9].attributes.coverImage.large;
-       pop3.alt = "cowboy beebop";
-       pop3.classList.add("imagepop");
-   }
-
-   let divDescriptionpop3 = document.getElementById("descriptionPop3");
-   let h3pop3 = document.createElement("h2");
-   h3pop3.textContent = response.data[9].attributes.canonicalTitle;
-   divDescriptionpop3.appendChild(h3pop3);
-   let spanpop3 = document.createElement("span");
-   spanpop3.textContent = response.data[9].attributes.description;
-   spanpop3.classList.add("textind");
-   divDescriptionpop3.appendChild(spanpop3);
-
-  // pop4
-  let divPop4 = document.getElementById("pop4");
-  if (response.data[11].attributes.coverImage) {
-      let pop4 = document.createElement("img");
-      divPop4.appendChild(pop4);
-      pop4.src = response.data[11].attributes.coverImage.large;
-      pop4.alt = "cowboy beebop";
-      pop4.classList.add("imagepop");
-  }
-
-  let divDescriptionpop4 = document.getElementById("descriptionPop4");
-  let h4pop4 = document.createElement("h2");
-  h4pop4.textContent = response.data[11].attributes.canonicalTitle;
-  divDescriptionpop4.appendChild(h4pop4);
-  let spanpop4 = document.createElement("span");
-  spanpop4.textContent = response.data[11].attributes.description;
-  spanpop4.classList.add("textind");
-  divDescriptionpop4.appendChild(spanpop4);
-
- 
-}
 */
