@@ -9,8 +9,7 @@ xhttp.onload = function () {
     console.log(JSON.parse(this.responseText));
 
 
-    // let divCategory = document.getElementById("options");
-
+    
     let divImage = document.getElementById("imageinfo");
     let img = document.createElement("img");
     divImage.appendChild(img);
