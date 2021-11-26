@@ -168,3 +168,13 @@ a:hover {
 .centro {
         text-align: center;
 }
+.next{
+    color:white;
+    background: rgba(53, 16, 16, 0.29);
+    padding: 20px]
+}
+.over{
+    color:white;
+    background: rgba(53, 16, 16, 0.29);
+    padding: 20px;
+}
