@@ -1,25 +1,26 @@
+
+var paginaAtual = 0
 var xhttp = new XMLHttpRequest();
-
 xhttp.onload = function () {
-
+    
     let response = JSON.parse(this.responseText);
     console.log(JSON.parse(this.responseText));
 
     for (data of response.data) {
-        let div = document.getElementById("colum2")
+        let div = document.getElementById("columManga")
         let div1 = document.createElement("div")
-        div1.classList.add("sty²")
+        div1.classList.add("styManga")
         div.appendChild(div1)
         let div2 = document.createElement("div")
-        div2.classList.add("imagepop");
+        div2.classList.add("imgind");
         div1.appendChild(div2);
         let div3 = document.createElement("div")
-        div3.classList.add("textpop")
+        div3.classList.add("textind")
         div1.appendChild(div3);
         if (data.attributes.coverImage) {
             let image = document.createElement("img");
             div2.appendChild(image);
-            image.src = data.attributes.coverImage.large;
+            image.src = data.attributes.coverImage.tiny;
             image.alt = data.attributes.slug
             image.classList.add("imgind");
             image.id = data.id;
@@ -38,5 +39,7 @@ xhttp.onload = function () {
         div3.appendChild(span);
     }
 }
-xhttp.open('GET', "https://kitsu.io/api/edge/trending/anime");
-xhttp.send()
+
+
+    xhttp.open('GET', "https://kitsu.io/api/edge/trending/anime");
+    xhttp.send();
