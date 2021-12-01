@@ -10,7 +10,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
     </style>
-    <script src="api-categories.js"></script>
 </head>
 
 <body>
@@ -46,7 +45,7 @@
         <div class="centro">
             <div class='colum1' style="margin-top: 2rem; justify-content: center;">
                 <h2 style='text-align: left;'>Category</h2>
-                <select name="select">
+                <select id="select">
                     <!-- <option value="shounem">shounem</option>
                     <option value="escolar">escolar</option>
                     <option value="comedia">comedia</option>
@@ -55,9 +54,9 @@
                     <option value="mecha">mecha</option>
                     <option value="samurai">samurai</option> -->
                 </select>
-                <input class="inputPesquisa" type="text" value="Pesquisar..." />
+                <input type="button" value="Pesquisar" onclick="filtroCategoria()">Pesquisar</button>
             </div>
-            <div class="colum2" style="margin-top: 2rem; justify-content: center;">
+            <div class="colum1">
                 <h2>animes :</h2>
                 <!--animes -->
                 <div class="colorfundo" id="category">
@@ -65,11 +64,13 @@
                     <!-- <div class="textind"></div> -->
                 </div>
                 <!--animes -->
-               
+
 
             </div>
         </div>
         <!--animes -->
     </div>
-    </div>
-    </div>
+    <script src="api-categories.js"></script>
+</body>
+
+</html>

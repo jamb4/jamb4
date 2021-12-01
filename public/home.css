@@ -1,24 +1,25 @@
 .colum1 {
-    max-width: 40%;
+    position: relative;
+    max-width: 35%;
     flex-direction: column;
     display: flex;
-    margin: auto !important;
+   
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.35);
-    width: 60%;
+  
     min-width: 305px;
-    padding: 20px;
-    margin-bottom: 2rem;
+   
 }
 
 
 .colum2 {
     display: flex;
-    max-width: 35%;
+   padding: 20px;
+   
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.35);
-    width: 20%;
-    min-width: 30%;
+    width: 40%;
+    min-width: 305px;
     padding: 20px;
     margin-bottom: 2rem;
     
@@ -29,7 +30,7 @@
 
 
 .styInd {
-    
+    margin-right: 30px;
     display: flex;
     flex-direction: column;
     margin: 3rem;
@@ -231,8 +232,18 @@ color:white;
 background: rgba(53, 16, 16, 0.29);
 padding: 20px;
 }
+.colbtn {
+    justify-content: space-evenly;
+    display: flex;
+    
+}
 
 @media only screen and (max-width: 500px) {
+    .colum1 {
+        position: relative;
+        z-index: 0;
+        margin-right: 60px;
+    }
     label {
         display: block;
         cursor: pointer;
@@ -272,7 +283,13 @@ padding: 20px;
     }
 
     .colum2 {
-
-        background: rgba(53, 16, 16, 0.29);
+        margin-top: 20px;
+        min-width: 40%;
+        width: 60%;
+        background: rgba(53, 16, 16, 0.233);
+    }
+    .dropdown-content{
+        z-index: 1;
+        position: absolute;
     }
 }
