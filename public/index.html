@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>animaali?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+    </style>
+</head>
+
+<body>
+    <!--navegacao -->
+    <div class="container">
+        <h1 class="title">Anima<span class="title²">ali?</h1>
+            
+            <div class="nav">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle" />
+                <div class="menu">
+                    <div class="dropdown" style="float:right;">
+                        <button class="dropbtn">Usuario</button>
+                        <div class="dropdown-content">
+                            <a href="cadastro.html">cadastro</a>
+                            <a href="#">Login</a>
+                            <a href="#">Contato</a>
+                        </div>
+                    </div>
+                    <a href="index.html">Home</a>
+                    <a href="category.html">Category</a>
+                    <a href="manga.html">Manga</a>
+                    <a href="popularity.html"><span>Pop</span></a>
+                    <div class="mobile">
+                        <a href="cadastro.html"><span class="">Cadastro</span></a>
+                        <a href="login.html"><span class="">Login</span></a>
+                    </div>
+                </div>
+            </div>
+            <!--navegacao -->
+            <!--body -->
+            <!--coluna1 -->
+            <div class="conteudo">
+                <div class="colbtn">
+                    <div id= 'colum1' class='colum1'>
+                
+                    </div>
+                    
+                    <div class="pagina">
+                        <button id=over class=over> over </button> <button id=next class=next> next </button>
+                        
+                    </div> 
+                </div>
+           
+            
+            <!--coluna 2 -->
+            
+            <div id= 'colum2' class='colum2'>
+                <p> Popularity top 10:</p>
+            </div>
+        </div>
+        
+    </div>
+    <script src="api-home.js"></script>
+    <script src="api-pop.js"></script>
+</body>
+
+</html>
