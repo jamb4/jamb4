@@ -159,8 +159,19 @@ input {
 .btncad:hover {
     background-color: white;
 }
+h3{
+    margin-left: 30px;
+}
+.secat{
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.35);
+    display: inline-block;
+    border-radius: 20px;
+}
 
 select {
+    margin-bottom: 30px;
+    width: 450px;
     background: rgba(94, 93, 93, 0.527);
     display: inline-block;
     margin-right: 23rem;
