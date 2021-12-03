@@ -15,7 +15,7 @@ xhttp.onload = function () {
     divImage.appendChild(img);
     img.src = response.data.attributes.coverImage.tiny;
     img.alt =  response.data.attributes.slug;
-    img.classList.add("imgind");
+    img.classList.add("imgind2");
 
     let name = document.getElementById("name");
     name.textContent=response.data.attributes.canonicalTitle;

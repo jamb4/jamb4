@@ -1,35 +1,32 @@
-document.getElementById("next").addEventListener("click", mudaPaginaMais);
-document.getElementById("over").addEventListener("click", mudaPaginaMenos);
+const limite = 12;
+var selectCategoria = document.getElementsByTagName("select")[0]
+selectCategoria.onchange = pegaDados;
 var paginaAtual = 0
 var xhttp = new XMLHttpRequest();
 
-xhttp.onload = function () {
-
-    let response = JSON.parse(this.responseText);
-    console.log(JSON.parse(this.responseText));
-
+function montaPagina(response) {
     for (data of response.data) {
-        let div = document.getElementById("colum1")
-        let div1 = document.createElement("div")
-        div1.classList.add("styInd")
-        div.appendChild(div1)
-        let div2 = document.createElement("div")
+        let div = document.getElementById("colum1");
+        let div1 = document.createElement("div");
+        div1.classList.add("styInd");
+        div.appendChild(div1);
+        let div2 = document.createElement("div");
         div2.classList.add("imgind");
         div1.appendChild(div2);
-        let div3 = document.createElement("div")
-        div3.classList.add("textind")
+        let div3 = document.createElement("div");
+        div3.classList.add("textind");
         div1.appendChild(div3);
         if (data.attributes.coverImage) {
             let image = document.createElement("img");
             div2.appendChild(image);
             image.src = data.attributes.coverImage.large;
-            image.alt = data.attributes.slug
+            image.alt = data.attributes.slug;
             image.classList.add("imgind");
             image.id = data.id;
             image.onclick = function (event) {
                 let id = event.target.id;
-                window.location.href = `paginaep.html?anime=${id}` //"paginaep.html?anime=" + response.data[0].id
-            }
+                window.location.href = `paginaep.html?anime=${id}`; //"paginaep.html?anime=" + response.data[0].id
+            };
         }
 
         let h2 = document.createElement("h2");
@@ -37,107 +34,43 @@ xhttp.onload = function () {
         div3.appendChild(h2);
         let span = document.createElement("span");
         span.textContent = data.attributes.description;
-        span.classList.add("textind");
+        span.classList.add("textind1");
         div3.appendChild(span);
     }
 }
-xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=0");
-xhttp.send();
 
-function mudaPaginaMais () {
-    paginaAtual += 1
-    let div = document.getElementById("colum1")
-    div.innerHTML = ""
+document.getElementById("next").onclick = () => {
+    paginaAtual += 1;
+    pegaDados();
+}
+
+document.getElementById("over").onclick = () => {
+    paginaAtual -= 1;
+    pegaDados();
+}
+
+function pegaDados() {
+    let div = document.getElementById("colum1");
+    div.innerHTML = "";
     xhttp.onload = function () {
         let response = JSON.parse(this.responseText);
         console.log(JSON.parse(this.responseText));
-
-        for (data of response.data) {
-            let div1 = document.createElement("div")
-            div1.classList.add("styInd")
-            div.appendChild(div1)
-            let div2 = document.createElement("div")
-            div2.classList.add("imgind");
-            div1.appendChild(div2);
-            let div3 = document.createElement("div")
-            div3.classList.add("textind")
-            div1.appendChild(div3);
-            if (data.attributes.coverImage) {
-                let image = document.createElement("img");
-                div2.appendChild(image);
-                image.src = data.attributes.coverImage.large;
-                image.alt = data.attributes.slug
-                image.classList.add("imgind");
-                image.id = data.id;
-                image.onclick = function (event) {
-                    let id = event.target.id;
-                    window.location.href = `paginaep.html?anime=${id}` //"paginaep.html?anime=" + response.data[0].id
-                }
-            }
-
-            let h2 = document.createElement("h2");
-            h2.textContent = data.attributes.canonicalTitle;
-            div3.appendChild(h2);
-            let span = document.createElement("span");
-            span.textContent = data.attributes.description;
-            span.classList.add("textind");
-            div3.appendChild(span);
-        }
+    
+        montaPagina(response);
     }
-    xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=" + paginaAtual * 12);
+    xhttp.open('GET', getURL());
     xhttp.send();
 }
 
 
-
-    function mudaPaginaMenos() {
-        paginaAtual -= 1
-        let div = document.getElementById("colum1")
-        div.innerHTML = ""
-        xhttp.onload = function () {
-            let response = JSON.parse(this.responseText);
-            console.log(JSON.parse(this.responseText));
-    
-            for (data of response.data) {
-                let div1 = document.createElement("div")
-                div1.classList.add("styInd")
-                div.appendChild(div1)
-                let div2 = document.createElement("div")
-                div2.classList.add("imgind");
-                div1.appendChild(div2);
-                let div3 = document.createElement("div")
-                div3.classList.add("textind")
-                div1.appendChild(div3);
-                if (data.attributes.coverImage) {
-                    let image = document.createElement("img");
-                    div2.appendChild(image);
-                    image.src = data.attributes.coverImage.large;
-                    image.alt = data.attributes.slug
-                    image.classList.add("imgind");
-                    image.id = data.id;
-                    image.onclick = function (event) {
-                        let id = event.target.id;
-                        window.location.href = `paginaep.html?anime=${id}` //"paginaep.html?anime=" + response.data[0].id
-                    }
-                }
-    
-                let h2 = document.createElement("h2");
-                h2.textContent = data.attributes.canonicalTitle;
-                div3.appendChild(h2);
-                let span = document.createElement("span");
-                span.textContent = data.attributes.description;
-                span.classList.add("textind");
-                div3.appendChild(span);
-            }
-        }
-        xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=" + paginaAtual * 12);
-        xhttp.send();
+function getURL() {
+    if (selectCategoria.value !== "-") {
+        return "https://kitsu.io/api/edge/anime?filter[categories]= " + selectCategoria.value + "&page[limit]=12&page[offset]=" + paginaAtual * limite;
     }
-    
-    xhttp.open('GET', "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=" + paginaAtual * 12);
-    xhttp.send();
+    return "https://kitsu.io/api/edge/anime?page[limit]=12&page[offset]=" + paginaAtual * limite;
+}
 
-
+pegaDados()
 /*
    // pop2
    let divPop2 = document.getElementById("pop2");

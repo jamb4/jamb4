@@ -34,7 +34,7 @@ xhttp.onload = function () {
         div3.appendChild(h2);
         let span = document.createElement("span");
         span.textContent = data.attributes.description;
-        span.classList.add("textind");
+        span.classList.add("textind1");
         div3.appendChild(span);
     }
 }

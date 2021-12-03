@@ -84,7 +84,7 @@ a:hover {
 }
 
 .dropdown {
-    background-color: rgba(53, 16, 16, 0.29);
+    
     position: relative;
     display: inline-block;
 }
@@ -127,9 +127,30 @@ a:hover {
 }
 
 @media only screen and (max-width: 500px) {
+    .imgind2{
+        width: 100%;
+    }
+    .infoani{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .info{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    input{
+      
+        width: 100%;
+    }
+
+    .form{
+       align-items: center;
+        
+        width: 100%;
+    }
    
     .colum1 {
-        min-width: 60%;
+        min-width: 62%;
         position: relative;
         z-index: -1;
     }
@@ -189,7 +210,23 @@ a:hover {
         position: absolute;
     }
     .styind {
-        min-width: 60%;
+        text-align:center;
+        min-width: 255px;
+        display: flex;
+        align-items: center
+    }
+    .textind{
+        align-items:center;
+    }
+    .sty²{
+        text-align:center;
+        min-width: 255px;
+        display: flex;
+        align-items: center;
+        width: 250px;
+    }
+    .nav {
+    align-items: center;
     }
 }
 
