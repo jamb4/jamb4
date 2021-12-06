@@ -19,7 +19,6 @@ xhttp.onload = function () {
         let div3 = document.createElement("div")
         div3.classList.add("textind")
         div1.appendChild(div3);
-        a
         if (data.attributes.coverImage) {
             let image = document.createElement("img");
             div2.appendChild(image);

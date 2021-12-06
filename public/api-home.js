@@ -22,11 +22,11 @@ function montaPagina(response) {
             image.src = data.attributes.coverImage.large;
             image.alt = data.attributes.slug;
             image.classList.add("imgind");
-            image.id = data.id;
-            image.onclick = function (event) {
-                let id = event.target.id;
+            div1.id = data.id;
+            div1.addEventListener('click', function (event) {
+                let id = pegaDivPai(event.target);
                 window.location.href = `paginaep.html?anime=${id}`; //"paginaep.html?anime=" + response.data[0].id
-            };
+            });
         }
 
         let h2 = document.createElement("h2");
@@ -37,6 +37,13 @@ function montaPagina(response) {
         span.classList.add("textind1");
         div3.appendChild(span);
     }
+}
+
+function pegaDivPai(node) {
+    while(node.tagName.toLowerCase() !== 'div' || !node.id) {
+        node = node.parentNode;   
+    }
+    return node.id;
 }
 
 document.getElementById("next").onclick = () => {
@@ -55,7 +62,8 @@ function pegaDados() {
     xhttp.onload = function () {
         let response = JSON.parse(this.responseText);
         console.log(JSON.parse(this.responseText));
-    
+        let btn = document.createElement("button");
+      
         montaPagina(response);
     }
     xhttp.open('GET', getURL());
