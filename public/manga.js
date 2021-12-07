@@ -4,7 +4,7 @@ document.getElementById("over").addEventListener("click", mudaPaginaBaixo);
 var paginaAtual = 0
 var xhttp = new XMLHttpRequest();
 xhttp.onload = function () {
-    
+
     let response = JSON.parse(this.responseText);
     console.log(JSON.parse(this.responseText));
 

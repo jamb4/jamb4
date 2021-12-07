@@ -57,6 +57,7 @@
 }
 .episodios:hover{background-color: white;
 color: black;}
+
 .infoani{
     display: flex;
     justify-content: space-between;
@@ -68,7 +69,10 @@ color: black;}
 li{
     margin-left: 30px;
     display: flex;
+    align-items: center;
+    color: wheat;
 }
+
 @media only screen and (max-width: 800px) {
     .imgind2{
         width: 100%;
