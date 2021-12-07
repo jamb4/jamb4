@@ -1,15 +1,10 @@
 .colum1 {
-    position: relative;
-    max-width: 55%;
-    min-width: 45%;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
+    min-width: 45%;
 
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.35);
-
-
-
 }
 
 
@@ -19,7 +14,7 @@
 
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.35);
-    width: 30%;
+    width: 80%;
     min-width: 30%;
     padding: 20px;
     margin-bottom: 2rem;
@@ -34,7 +29,7 @@
     margin-right: 30px;
     display: flex;
     flex-direction: column;
-    margin: 3rem;
+    margin-left:30px;
     background: rgba(200, 188, 188, 0.46);
 
     margin-bottom: 20px;
@@ -55,9 +50,8 @@
 
 .conteudo {
     color: white;
-
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -162,24 +156,42 @@ input {
 
 h3 {
     margin-left: 30px;
+    color: white;
+}
+
+.coluna {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.coluna-direita,
+.coluna-esquerda {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: flex-start;
+}
+
+.coluna-esquerda {
+    align-items: flex-end;
+    margin-left: auto;
 }
 
 .secat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 30px;
     background: rgba(0, 0, 0, 0.35);
-    display: inline-block;
     border-radius: 20px;
+    padding-bottom: 20px;
 }
 
 select {
-    padding: 20px;
-    font-size: 22px;
-    margin-bottom: 30px;
-    width: 450px;
-    background: rgba(94, 93, 93, 0.527);
-    display: inline-block;
-    margin-right: 23rem;
     color: white;
+    background: rgba(94, 93, 93, 0.527);
+    width: 80%;
+    height: 50px;
 }
 
 .busca {
@@ -266,13 +278,6 @@ select {
     padding: 20px;
 }
 
-.colbtn {
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-}
-
 .dropbtn1 {
     background: rgba(49, 22, 22, 0.35);
     color: white;
@@ -280,17 +285,17 @@ select {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    z-index: 2;
+   
 }
 
 .dropdown1 {
-    z-index: 2;
+   
     position: relative;
     display: inline-block;
 }
 
 .dropdown-content1 {
-    z-index: 2;
+   
     display: none;
     position: absolute;
     background-color: #350505b7 min-width: 160px;
@@ -299,7 +304,7 @@ select {
 }
 
 .dropdown-content1 a {
-    z-index: 2;
+   
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -340,7 +345,7 @@ select {
     }
 
     .menu {
-        z-index: 2;
+       
         text-align: center;
         width: 100%;
         display: none;
@@ -359,7 +364,7 @@ select {
     }
 
     .dropdown {
-        z-index: 2;
+       
         display: none;
     }
 
@@ -381,7 +386,7 @@ select {
     }
 
     .dropdown-content {
-        z-index: 2;
+       
         position: absolute;
     }
 
@@ -460,7 +465,7 @@ select {
     }
 
     .dropdown {
-        z-index: 2;
+       
         display: none;
     }
 
@@ -482,7 +487,7 @@ select {
 
     .dropdown-content {
         background-color: rgba(53, 16, 16, 0.29);
-        z-index: 2;
+       
         position: absolute;
     }
 

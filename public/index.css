@@ -84,9 +84,7 @@ a:hover {
 }
 
 .dropdown {
-    
-    position: relative;
-    display: inline-block;
+    margin-top: 10px;
 }
 
 .dropdown-content {
@@ -97,7 +95,7 @@ a:hover {
     background: rgba(221, 221, 221, 0.29);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+   
 }
 
 .dropdown-content a {
@@ -127,10 +125,14 @@ a:hover {
 }
 
 @media only screen and (max-width: 500px) {
-    select {
-        padding: 40px;
-        font-size: 35px;
+    .coluna-esquerda,.coluna-direita{
+        width: 100%;
     }
+
+ .coluna {
+     grid-template-columns: 100%;
+     
+ }
     .imgind2{
         width: 100%;
     }
@@ -154,10 +156,12 @@ a:hover {
     }
    
     .colum1 {
+        display: flex;
+        
         max-width:100%;
         width:100%;
         position: relative;
-        z-index: -1;
+        
     }
     label {
         display: block;
@@ -166,7 +170,7 @@ a:hover {
 
     .menu {
         position: absolute;
-        z-index: 1;
+       
         background: #AD2E4D;
         text-align: center;
         width: 100%;
@@ -181,7 +185,7 @@ a:hover {
     }
     #toggle {
         position: absolute;
-        z-index: 2;
+        
     }
 
     #toggle:checked+.menu {
@@ -190,7 +194,7 @@ a:hover {
     }
 
     .dropdown {
-        z-index: 1;
+       
         display: none;
     }
 
@@ -211,11 +215,13 @@ a:hover {
     }
     .dropdown-content{
         background-color: rgba(53, 16, 16, 0.29); ;
-        z-index: 1;
+       
         position: absolute;
     }
     .styind {
-        text-align:center;
+        display: flex;
+        margin-right: 40px;
+        align-items:center;
         min-width: 255px;
         display: flex;
         align-items: center
@@ -262,7 +268,7 @@ a:hover {
         width: 100%;
         min-width: 62%;
         position: relative;
-        z-index: -1;
+      
     }
     label {
         display: block;
@@ -271,7 +277,7 @@ a:hover {
 
     .menu {
         position: absolute;
-        z-index: 1;
+       
         background: #AD2E4D;
         text-align: center;
         width: 100%;
@@ -286,7 +292,7 @@ a:hover {
     }
     #toggle {
         position: absolute;
-        z-index: 2;
+       
     }
 
     #toggle:checked+.menu {
@@ -295,7 +301,7 @@ a:hover {
     }
 
     .dropdown {
-        z-index: 1;
+       
         display: none;
     }
 
@@ -310,13 +316,13 @@ a:hover {
     }
 
     .colum2 {
-        width: 100%;
+        width: 90%;
         min-width: 60%;
         background: rgba(53, 16, 16, 0.29);
     }
     .dropdown-content{
         background-color: rgba(53, 16, 16, 0.29); ;
-        z-index: 1;
+       
         position: absolute;
     }
     .styind {
